@@ -5,7 +5,10 @@ import cpy from 'cpy';
 async function updateAndCopyPackageJson() {
 	const pkg = await fs.readJSON('package.json');
 
-	const entries = await glob('src/**/*.ts');
+	const entries = await glob([
+		'src/**/*.ts',
+		'!**/*{bun,d1,gel,sqlite,mysql,libsql,planetscale,singlestore,sql-js,tidb}*/**',
+	]);
 
 	pkg.exports = entries.reduce<
 		Record<string, {

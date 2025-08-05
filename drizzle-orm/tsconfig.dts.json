@@ -9,5 +9,17 @@
 		"emitDeclarationOnly": true,
 		"incremental": false
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"exclude": [
+		"**/*bun*",
+		"**/*d1*",
+		"**/*gel*",
+		"**/*libsql*",
+		"**/*mysql*",
+		"**/*planetscale*",
+		"**/*singlestore*",
+		"**/*sql-js*",
+		"**/*sqlite*",
+		"**/*tidb*"
+	]
 }

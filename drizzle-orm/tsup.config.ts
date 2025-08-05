@@ -1,7 +1,9 @@
 import { globSync } from 'glob';
 import { defineConfig } from 'tsup';
 
-const entries = globSync('src/**/*.ts');
+const entries = globSync('src/**/*.ts', {
+	ignore: '**/*{bun,d1,gel,sqlite,mysql,libsql,planetscale,singlestore,sql-js,tidb}*/**',
+});
 
 export default defineConfig({
 	entry: entries,
