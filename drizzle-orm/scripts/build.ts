@@ -56,6 +56,7 @@ await Promise.all([
 		await $`tsup`.stdio('pipe', 'pipe', 'pipe');
 	})(),
 	(async () => {
+		await fs.remove('dist-dts');
 		await $`tsc -p tsconfig.dts.json`.stdio('pipe', 'pipe', 'pipe');
 		await cpy('dist-dts/**/*.d.ts', 'dist.new', {
 			rename: (basename) => basename.replace(/\.d\.ts$/, '.d.cts'),
