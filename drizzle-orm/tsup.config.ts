@@ -11,7 +11,6 @@ export default defineConfig({
 	format: ['cjs', 'esm'],
 	bundle: false,
 	splitting: false,
-	sourcemap: true,
 	outExtension({ format }) {
 		return {
 			js: format === 'cjs' ? '.cjs' : '.js',
