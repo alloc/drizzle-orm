@@ -1,12 +1,18 @@
 import { entityKind } from '~/entity.ts';
 import type { Column } from './column.ts';
-import type { GelColumn, GelExtraConfigColumn } from './gel-core/index.ts';
-import type { MySqlColumn } from './mysql-core/index.ts';
+// import type { GelColumn, GelExtraConfigColumn } from './gel-core/index.ts';
+// import type { MySqlColumn } from './mysql-core/index.ts';
 import type { ExtraConfigColumn, PgColumn, PgSequenceOptions } from './pg-core/index.ts';
-import type { SingleStoreColumn } from './singlestore-core/index.ts';
+// import type { SingleStoreColumn } from './singlestore-core/index.ts';
 import type { SQL } from './sql/sql.ts';
-import type { SQLiteColumn } from './sqlite-core/index.ts';
+// import type { SQLiteColumn } from './sqlite-core/index.ts';
 import type { Assume, Simplify } from './utils.ts';
+
+type GelColumn<A, B = unknown, C = unknown> = unknown;
+type GelExtraConfigColumn = unknown;
+type MySqlColumn<A, B = unknown, C = unknown> = unknown;
+type SingleStoreColumn<A, B = unknown, C = unknown> = unknown;
+type SQLiteColumn<A, B = unknown, C = unknown> = unknown;
 
 export type ColumnDataType =
 	| 'string'
